@@ -10,4 +10,5 @@ class RepositoriesController < ApplicationController
       req.params['client_secret'] = ''
       req.params['v'] = '20180713'
   end
+  render 'search'
 end
