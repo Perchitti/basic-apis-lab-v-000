@@ -16,6 +16,7 @@ class RepositoriesController < ApplicationController
     @repo = body['items']
   else
     @error = "Sorry, error with @repo."
+  end
   render 'search'
 end
 
