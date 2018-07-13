@@ -11,6 +11,11 @@ class RepositoriesController < ApplicationController
       req.params['v'] = '20180713'
       req.params['q'] = params[:query]
   end
+  body = JSON.parse(@resp.body)
+  if @resp.success?
+    @repo = body['items']
+  else
+    @error = "Sorry, error with @repo."
   render 'search'
 end
 
