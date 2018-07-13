@@ -9,6 +9,7 @@ class RepositoriesController < ApplicationController
       req.params['client_id'] = ''
       req.params['client_secret'] = ''
       req.params['v'] = '20180713'
+      req.params['q'] = params[:query]
   end
   render 'search'
 end
